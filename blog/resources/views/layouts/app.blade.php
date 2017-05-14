@@ -502,12 +502,12 @@
                 <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
                 <ul class="page-sidebar-menu page-sidebar-menu-hover-submenu1" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
                     <li class="heading">
-                        <h3>GENERAL</h3>
+                        <h3>HR管理系统</h3>
                     </li>
                     <li class="active">
                         <a href="index.html">
                             <i class="icon-home"></i>
-                            <span class="title">Dashboard</span>
+                            <span class="title">主页</span>
                         </a>
                     </li>
                     <!-- BEGIN ANGULARJS LINK -->
@@ -515,14 +515,14 @@
                         <a href="angularjs" target="_blank">
                             <i class="icon-paper-plane"></i>
                             <span class="title">
-						AngularJS Version </span>
+						招聘计划与分解 </span>
                         </a>
                     </li>
                     <!-- END ANGULARJS LINK -->
                     <li>
                         <a href="javascript:;">
                             <i class="icon-basket"></i>
-                            <span class="title">eCommerce</span>
+                            <span class="title">数据管理</span>
                             <span class="arrow "></span>
                         </a>
                         <ul class="sub-menu">
@@ -556,7 +556,7 @@
                     <li>
                         <a href="javascript:;">
                             <i class="icon-rocket"></i>
-                            <span class="title">Page Layouts</span>
+                            <span class="title">面试邀约登记</span>
                             <span class="arrow "></span>
                         </a>
                         <ul class="sub-menu">
@@ -609,7 +609,7 @@
                     <li>
                         <a href="javascript:;">
                             <i class="icon-diamond"></i>
-                            <span class="title">UI Features</span>
+                            <span class="title">招聘台账</span>
                             <span class="arrow "></span>
                         </a>
                         <ul class="sub-menu">
@@ -698,7 +698,7 @@
                     <li>
                         <a href="javascript:;">
                             <i class="icon-folder"></i>
-                            <span class="title">Multi Level Menu</span>
+                            <span class="title">人力成本</span>
                             <span class="arrow "></span>
                         </a>
                         <ul class="sub-menu">
@@ -758,13 +758,47 @@
                             </li>
                         </ul>
                     </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="icon-basket"></i>
+                            <span class="title">渠道管理</span>
+                            <span class="arrow "></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="index_extended.html">
+                                    <i class="icon-home"></i>
+                                    Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="index_extended.html">
+                                    <i class="icon-basket"></i>
+                                    Orders</a>
+                            </li>
+                            <li>
+                                <a href="index_extended.html">
+                                    <i class="icon-tag"></i>
+                                    Order View</a>
+                            </li>
+                            <li>
+                                <a href="index_extended.html">
+                                    <i class="icon-handbag"></i>
+                                    Products</a>
+                            </li>
+                            <li>
+                                <a href="index_extended.html">
+                                    <i class="icon-pencil"></i>
+                                    Product Edit</a>
+                            </li>
+                        </ul>
+                    </li>
                     <li class="heading">
-                        <h3>MORE FEATURES</h3>
+                        <h3>系统管理</h3>
                     </li>
                     <li>
                         <a href="javascript:;">
                             <i class="icon-settings"></i>
-                            <span class="title">Form Stuff</span>
+                            <span class="title">系统管理</span>
                             <span class="arrow "></span>
                         </a>
                         <ul class="sub-menu">
@@ -809,7 +843,7 @@
                     <li>
                         <a href="javascript:;">
                             <i class="icon-briefcase"></i>
-                            <span class="title">Data Tables</span>
+                            <span class="title">用户管理</span>
                             <span class="arrow "></span>
                         </a>
                         <ul class="sub-menu">
