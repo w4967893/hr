@@ -849,27 +849,15 @@
                         <ul class="sub-menu">
                             <li>
                                 <a href="index_extended.html">
-                                    Basic Datatables</a>
+                                    用户管理</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('role/index') }}">
+                                    角色管理</a>
                             </li>
                             <li>
                                 <a href="index_extended.html">
-                                    Responsive Datatables</a>
-                            </li>
-                            <li>
-                                <a href="index_extended.html">
-                                    Managed Datatables</a>
-                            </li>
-                            <li>
-                                <a href="index_extended.html">
-                                    Editable Datatables</a>
-                            </li>
-                            <li>
-                                <a href="index_extended.html">
-                                    Advanced Datatables</a>
-                            </li>
-                            <li>
-                                <a href="index_extended.html">
-                                    Ajax Datatables</a>
+                                    权限管理</a>
                             </li>
                         </ul>
                     </li>
@@ -878,10 +866,11 @@
             </div>
         </div>
         @show
-
-    <div class="container">
+    <!-- BEGIN CONTENT -->
+    <div class="page-content-wrapper">
         @yield('content')
     </div>
+    <!-- END CONTENT -->
 </div>
 <!-- BEGIN FOOTER -->
 <div class="page-footer">
