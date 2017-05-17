@@ -24,8 +24,8 @@ class RoleController extends Controller
      */
     public function index()
     {
-        $roles = DB::table('role')->get();
-        return view('role/index');
+        $roleArr = DB::table('role')->get()->toArray();
+        return view('role/index')->with('roleList',$roleArr);
     }
 
     public function add(Request $request)
