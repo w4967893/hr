@@ -28,9 +28,8 @@ class RoleController extends Controller
         return view('role/index')->with('roleList',$roleArr);
     }
 
-    public function add(Request $request)
+    public function addView()
     {
-        $name = $request->get('name');
-        echo $name;
+        echo 1;
     }
 }
