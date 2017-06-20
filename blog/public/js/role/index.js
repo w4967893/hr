@@ -1,19 +1,19 @@
-
+//添加角色
 function add()
 {
-    alert(1);
+    var add_name = $('.add_name').val();
+    var add_desc = $('.add_desc').val();
     $.ajax({
-       type: "GET",
-       url: "/"+url+".html",
-       data: param,
-       success: function(msg){
-
-         // console.log(msg);
-         if(msg == 'true'){
-            location.reload();
-         }else{
-            alert('操作失败');
-         }
-       }
+        type: "POST",
+        url: "/role/add",
+        data: 'name='+add_name+'&desc='+add_desc,
+        success: function(msg){
+            // console.log(msg.code);
+            if(msg.code == 0){
+                location.reload();
+            }else{
+                alert('操作失败');
+            }
+        }
     });
 }

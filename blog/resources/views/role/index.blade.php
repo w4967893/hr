@@ -159,7 +159,7 @@
                                 <div class="form-group">
                                     <label class="col-md-3 control-label">名称</label>
                                     <div class="col-md-6">
-                                        <input type="text" class="form-control input-circle" placeholder="请填写角色名称">
+                                        <input type="text" class="form-control input-circle add_name" placeholder="请填写角色名称">
                                         {{--<span class="help-block">--}}
 														{{--A block of help text. </span>--}}
                                     </div>
@@ -167,7 +167,7 @@
                                 <div class="form-group">
                                     <label class="col-md-3 control-label">描述</label>
                                     <div class="col-md-6">
-                                        <input type="text" class="form-control input-circle" placeholder="请填写角色描述">
+                                        <input type="text" class="form-control input-circle add_desc" placeholder="请填写角色描述">
                                         {{--<span class="help-block">--}}
                                         {{--A block of help text. </span>--}}
                                     </div>

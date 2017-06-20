@@ -4,17 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Model\RoleModel;
 
-class RoleController extends Controller
+class RoleController extends BaseController
 {
+    protected $role_model;
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(RoleModel $role_model)
     {
-        $this->middleware('auth');
+        $this->role_model = $role_model;
     }
 
     /**
@@ -24,12 +27,24 @@ class RoleController extends Controller
      */
     public function index()
     {
-        $roleArr = DB::table('role')->get()->toArray();
+        $roleArr = DB::table('role')->simplePaginate(2);
         return view('role/index')->with('roleList',$roleArr);
     }
 
-    public function addView()
+    //添加角色
+    public function add(Request $request)
     {
-        echo 1;
+        $name = $request->input('name');
+        $desc = $request->input('desc');
+        $time = date('Y-m-d H:i:s', time());
+        $userObj = Auth::user();
+        $bool = $this->role_model->add($name, $desc, $time, $userObj->name);
+        if ($bool) {
+            return $this->respondSuccess('添加成功');
+        } else {
+            return $this->respondFailure('添加失败');
+        }
     }
+
+
 }
