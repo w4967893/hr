@@ -25,10 +25,11 @@ class RoleController extends BaseController
      *
      * @return bool
      */
-    public function index()
+    public function index(Request $request)
     {
-        $roleArr = DB::table('role')->simplePaginate(2);
-        return view('role/index')->with('roleList',$roleArr);
+        $role_name = $request->get('role_name');
+        $roleArr = DB::table('role')->where('name', 'like', '%'.$role_name.'%')->simplePaginate(1);
+        return view('role/index')->with(['roleList' => $roleArr, 'role_name' => $role_name]);
     }
 
     //添加角色

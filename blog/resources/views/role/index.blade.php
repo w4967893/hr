@@ -117,27 +117,7 @@
                     <div class="row">
                         <div class="col-md-8"></div>
                         <div class="col-md-3" style="float:right">
-                            <div class="dataTables_paginate paging_simple_numbers" id="sample_2_paginate">
-                                <ul class="pagination">
-                                    <li class="paginate_button previous disabled" aria-controls="sample_2" tabindex="0" id="sample_2_previous">
-                                        <a href="#">
-                                            <i class="fa fa-angle-left"></i>
-                                        </a>
-                                    </li>
-                                    <li class="paginate_button active" aria-controls="sample_2" tabindex="0">
-                                        <a href="#">1</a>
-                                    </li>
-                                    <li class="paginate_button " aria-controls="sample_2" tabindex="0">
-                                        <a href="#">2</a>
-                                    </li>
-                                    <li class="paginate_button " aria-controls="sample_2" tabindex="0">
-                                        <a href="#">3</a>
-                                    </li>
-                                    <li class="paginate_button next" aria-controls="sample_2" tabindex="0" id="sample_2_next">
-                                        <a href="#"><i class="fa fa-angle-right"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
+                            {!! $roleList->appends(array('role_name'=>$role_name))->render() !!}
                         </div>
                     </div>
                 </div>
