@@ -28,7 +28,7 @@ class RoleController extends BaseController
     public function index(Request $request)
     {
         $role_name = $request->get('role_name');
-        $roleArr = DB::table('role')->where('name', 'like', '%'.$role_name.'%')->simplePaginate(1);
+        $roleArr = DB::table('role')->where('name', 'like', '%'.$role_name.'%')->where(['status' => 0])->simplePaginate(env('PAGE_LIMIT'));
         return view('role/index')->with(['roleList' => $roleArr, 'role_name' => $role_name]);
     }
 
@@ -47,5 +47,10 @@ class RoleController extends BaseController
         }
     }
 
-
+    //删除角色
+    public function delete(Request $request)
+    {
+        $role_id = $request->get('role_id');
+        $this->role_model->update(['id' => $role_id], ['status' => 1]);
+    }
 }

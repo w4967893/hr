@@ -62,6 +62,20 @@
                         </div>
                     </div>
                 </div>
+                <form class="form-inline" role="form" action="/role/index" method="get">
+                    <div class="form-group">
+                        <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                        <input type="text" class="form-control" id="" name="role_name" placeholder="角色名称">
+                    </div>
+                    {{--<div class="form-group">--}}
+                    {{--<label class="sr-only" for="exampleInputPassword2">Password</label>--}}
+                    {{--<input class="form-control" id="" placeholder="">--}}
+                    {{--</div>--}}
+                    <div class="form-group" style="float:right">
+                        {{--<button class="btn blue">搜索</button>--}}
+                        <input type="submit" class="btn blue" value="搜索">
+                    </div>
+                </form>
                 <div class="portlet-body">
                     <table class="table table-striped table-bordered table-hover" id="sample_2">
                         <thead>

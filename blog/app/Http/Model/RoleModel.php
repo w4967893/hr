@@ -14,4 +14,11 @@ class RoleModel
         );
         return $id;
     }
+
+    //修改
+    public function update($where, $field)
+    {
+        $bool = DB::table('role')->where($where)->update($field);
+        var_dump($bool);
+    }
 }
