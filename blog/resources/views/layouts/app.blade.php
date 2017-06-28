@@ -848,7 +848,7 @@
                         </a>
                         <ul class="sub-menu">
                             <li>
-                                <a href="index_extended.html">
+                                <a href="{{ route('user/index') }}">
                                     用户管理</a>
                             </li>
                             <li>
