@@ -24,4 +24,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/role/add', 'RoleController@add')->name('role/add');
 
     Route::get('/user/index', 'UserController@index')->name('user/index');
+    Route::post('/user/add', 'UserController@add')->name('user/add');//添加用户
+    Route::get('/user/del', 'UserController@del')->name('user/del');//添加用户
+    Route::get('/user/reset', 'UserController@reset')->name('user/reset');//密码重置
 });
