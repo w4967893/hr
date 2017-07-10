@@ -7,11 +7,9 @@ use Illuminate\Support\Facades\DB;
 class DemandModel
 {
     //单个插入
-    public function add($name, $desc, $time, $username)
+    public function add($field)
     {
-        $id = DB::table('demand')->insertGetId(
-            ['name' => $name, 'describe' => $desc, 'create_time' => $time, 'create_name' => $username,]
-        );
+        $id = DB::table('demand')->insertGetId($field);
         return $id;
     }
 
@@ -32,5 +30,11 @@ class DemandModel
                         ->select('demand.*', 'center.name as center_name', 'affiliated_center.name as affiliated_center_name', 'division.name as division_name')
                         ->where($where)->simplePaginate(env('PAGE_LIMIT'));
         return $demandArr;
+    }
+
+    //获取一条信息
+    public function one($where)
+    {
+        return DB::table('demand')->where($where)->first()->toArray();
     }
 }
