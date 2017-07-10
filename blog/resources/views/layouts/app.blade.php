@@ -511,12 +511,31 @@
                         </a>
                     </li>
                     <!-- BEGIN ANGULARJS LINK -->
-                    <li class="tooltips" data-container="body" data-placement="right" data-html="true" data-original-title="AngularJS version demo">
-                        <a href="angularjs" target="_blank">
+                    {{--<li class="tooltips" data-container="body" data-placement="right" data-html="true" data-original-title="AngularJS version demo">--}}
+                        {{--<a href="angularjs" target="_blank">--}}
+                            {{--<i class="icon-paper-plane"></i>--}}
+                            {{--<span class="title">--}}
+						{{--招聘计划与分解 </span>--}}
+                        {{--</a>--}}
+                    {{--</li>--}}
+                    <li>
+                        <a href="javascript:;">
                             <i class="icon-paper-plane"></i>
-                            <span class="title">
-						招聘计划与分解 </span>
+                            <span class="title">招聘计划与分解</span>
+                            <span class="arrow "></span>
                         </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="{{ route('demand/index') }}">
+                                    <i class="icon-home"></i>
+                                    招聘计划</a>
+                            </li>
+                            <li>
+                                <a href="index_extended.html">
+                                    <i class="icon-basket"></i>
+                                    招聘分解</a>
+                            </li>
+                        </ul>
                     </li>
                     <!-- END ANGULARJS LINK -->
                     <li>

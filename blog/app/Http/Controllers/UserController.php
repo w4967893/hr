@@ -71,7 +71,7 @@ class UserController extends BaseController
         $user_id = $request->get('user_id');
         $where = ['id' => $user_id];
 
-        $password = Hash::make('wangchuang');//密码加密
+        $password = Hash::make('123456');//密码加密
         $field = ['password' => $password];
         $bool = $this->user_model->update($where, $field);
         if ($bool) {
