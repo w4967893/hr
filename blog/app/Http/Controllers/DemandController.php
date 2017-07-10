@@ -9,6 +9,8 @@ use App\Http\Model\DemandModel;
 use App\Http\Model\CenterModel;
 use App\Http\Model\AffiliatedCenterModel;
 use App\Http\Model\DivisionModel;
+use App\Http\Model\FinishModel;
+use App\Http\Model\DistributionModel;
 
 class DemandController extends BaseController
 {
@@ -16,17 +18,21 @@ class DemandController extends BaseController
     protected $center_model;
     protected $affiliated_center_model;
     protected $division_model;
+    protected $finish_model;
+    protected $distribution_model;
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct(DemandModel $demand_model, CenterModel $center_model, AffiliatedCenterModel $affiliated_center_model, DivisionModel $division_model)
+    public function __construct(DemandModel $demand_model, CenterModel $center_model, AffiliatedCenterModel $affiliated_center_model, DivisionModel $division_model, FinishModel $finish_model, DistributionModel $distribution_model)
     {
         $this->demand_model = $demand_model;
         $this->center_model = $center_model;
         $this->affiliated_center_model = $affiliated_center_model;
         $this->division_model = $division_model;
+        $this->finish_model = $finish_model;
+        $this->distribution_model = $distribution_model;
     }
 
     /**
@@ -111,6 +117,23 @@ class DemandController extends BaseController
             return $this->respondSuccess('删除成功');
         } else {
             return $this->respondFailure('删除失败');
+        }
+    }
+
+    //分配需求
+    public function distribution(Request $request)
+    {
+        $demand_id = $request->get('demand_id');
+        $user_id = $request->get('user_id');
+        $num = $request->get('num');
+        $finish = 0;
+
+        $insert = ['demand_id' => $demand_id, 'user_id' => $user_id, 'num' => $num, 'finish' => $finish];
+        $bool = $this->distribution_model->add($insert);
+        if ($bool) {
+            return $this->respondSuccess('添加成功');
+        } else {
+            return $this->respondFailure('添加失败');
         }
     }
 }
