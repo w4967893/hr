@@ -9,7 +9,6 @@ use App\Http\Model\DemandModel;
 use App\Http\Model\CenterModel;
 use App\Http\Model\AffiliatedCenterModel;
 use App\Http\Model\DivisionModel;
-use App\Http\Model\FinishModel;
 use App\Http\Model\DistributionModel;
 
 class DemandController extends BaseController
@@ -18,20 +17,18 @@ class DemandController extends BaseController
     protected $center_model;
     protected $affiliated_center_model;
     protected $division_model;
-    protected $finish_model;
     protected $distribution_model;
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct(DemandModel $demand_model, CenterModel $center_model, AffiliatedCenterModel $affiliated_center_model, DivisionModel $division_model, FinishModel $finish_model, DistributionModel $distribution_model)
+    public function __construct(DemandModel $demand_model, CenterModel $center_model, AffiliatedCenterModel $affiliated_center_model, DivisionModel $division_model, DistributionModel $distribution_model)
     {
         $this->demand_model = $demand_model;
         $this->center_model = $center_model;
         $this->affiliated_center_model = $affiliated_center_model;
         $this->division_model = $division_model;
-        $this->finish_model = $finish_model;
         $this->distribution_model = $distribution_model;
     }
 
