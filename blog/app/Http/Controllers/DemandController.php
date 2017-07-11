@@ -128,10 +128,25 @@ class DemandController extends BaseController
         $num = $request->get('num');
         $finish = 0;
 
+        $where = ['id' => $demand_id];
+        $demandArr = $this->demand_model->one($where);
+        //需求剩余人数
+        $remaining_num = $demandArr['remaining_num'] - $num;
+
+        if ($remaining_num < 0) {
+            return $this->respondFailure('分配人数过多');
+        }
+
         $insert = ['demand_id' => $demand_id, 'user_id' => $user_id, 'num' => $num, 'finish' => $finish];
         $bool = $this->distribution_model->add($insert);
         if ($bool) {
-            return $this->respondSuccess('添加成功');
+            //修改需求表
+            $update_bool = $this->demand_model->update($where, ['remaining_num' => $remaining_num]);
+            if ($update_bool) {
+                return $this->respondSuccess('添加成功');
+            } else {
+                return $this->respondFailure('添加失败');
+            }
         } else {
             return $this->respondFailure('添加失败');
         }
