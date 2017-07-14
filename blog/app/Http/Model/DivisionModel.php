@@ -10,4 +10,10 @@ class DivisionModel
     {
         return DB::table('division')->where($where)->first()->toArray();
     }
+
+    //删除
+    public function del($where)
+    {
+        return DB::table('division')->where($where)->delete();
+    }
 }

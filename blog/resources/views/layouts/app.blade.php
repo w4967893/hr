@@ -822,40 +822,16 @@
                         </a>
                         <ul class="sub-menu">
                             <li>
-                                <a href="index_extended.html">
-                                    Form Controls</a>
+                                <a href="{{ route('center/index') }}">
+                                    中心管理</a>
                             </li>
                             <li>
                                 <a href="index_extended.html">
-                                    iCheck Controls</a>
+                                    副中心管理</a>
                             </li>
                             <li>
                                 <a href="index_extended.html">
-                                    Form Layouts</a>
-                            </li>
-                            <li>
-                                <a href="index_extended.html">
-                                    <span class="badge badge-roundless badge-warning">new</span>Form X-editable</a>
-                            </li>
-                            <li>
-                                <a href="index_extended.html">
-                                    Form Wizard</a>
-                            </li>
-                            <li>
-                                <a href="index_extended.html">
-                                    Form Validation</a>
-                            </li>
-                            <li>
-                                <a href="index_extended.html">
-                                    <span class="badge badge-roundless badge-danger">new</span>Image Cropping</a>
-                            </li>
-                            <li>
-                                <a href="index_extended.html">
-                                    Multiple File Upload</a>
-                            </li>
-                            <li>
-                                <a href="index_extended.html">
-                                    Dropzone File Upload</a>
+                                    部门管理</a>
                             </li>
                         </ul>
                     </li>

@@ -28,5 +28,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/user/del', 'UserController@del')->name('user/del');//添加用户
     Route::get('/user/reset', 'UserController@reset')->name('user/reset');//密码重置
 
+    Route::get('/center/index', 'CenterController@index')->name('center/index');//中心列表
+    Route::post('/center/add', 'CenterController@add')->name('center/add');//添加中心
+    Route::get('/center/del', 'CenterController@del')->name('center/del');//删除中心
+
     Route::get('/demand/index', 'DemandController@index')->name('demand/index');//招聘计划
 });
