@@ -22,4 +22,11 @@ class AffiliatedCenterModel
     {
         return DB::table('affiliated_center')->where($where)->delete();
     }
+
+    //单个插入
+    public function add($insert)
+    {
+        $id = DB::table('affiliated_center')->insertGetId($insert);
+        return $id;
+    }
 }

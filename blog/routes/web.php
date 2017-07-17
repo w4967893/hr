@@ -32,5 +32,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/center/add', 'CenterController@add')->name('center/add');//添加中心
     Route::get('/center/del', 'CenterController@del')->name('center/del');//删除中心
 
+    Route::get('/affiliatedCenter/index', 'AffiliatedCenterController@index')->name('affiliatedCenter/index');//副中心列表
+    Route::post('/affiliatedCenter/add', 'AffiliatedCenterController@add')->name('affiliatedCenter/add');//添加副中心
+    Route::get('/affiliatedCenter/del', 'AffiliatedCenterController@del')->name('affiliatedCenter/del');//删除副中心
+
     Route::get('/demand/index', 'DemandController@index')->name('demand/index');//招聘计划
 });

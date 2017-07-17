@@ -826,7 +826,7 @@
                                     中心管理</a>
                             </li>
                             <li>
-                                <a href="index_extended.html">
+                                <a href="{{ route('affiliatedCenter/index') }}">
                                     副中心管理</a>
                             </li>
                             <li>
