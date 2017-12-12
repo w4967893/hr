@@ -11,14 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/', 'HomeController@index')->name('home');
     Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
     Route::get('/role/index', 'RoleController@index')->name('role/index');
     Route::post('/role/add', 'RoleController@add')->name('role/add');
