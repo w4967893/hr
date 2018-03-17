@@ -17,6 +17,8 @@
 
 Auth::routes();
 
+Route::get('/departure/apply', 'DepartureController@apply')->name('departure/apply');//离职列表
+
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/', 'HomeController@index')->name('home');
     Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
@@ -37,4 +39,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/affiliatedCenter/del', 'AffiliatedCenterController@del')->name('affiliatedCenter/del');//删除副中心
 
     Route::get('/demand/index', 'DemandController@index')->name('demand/index');//招聘计划
+
+    Route::get('/departure/index', 'DepartureController@index')->name('departure/index');//离职列表
 });

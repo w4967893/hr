@@ -541,34 +541,14 @@
                     <li>
                         <a href="javascript:;">
                             <i class="icon-basket"></i>
-                            <span class="title">数据管理</span>
+                            <span class="title">离职管理</span>
                             <span class="arrow "></span>
                         </a>
                         <ul class="sub-menu">
                             <li>
-                                <a href="index_extended.html">
+                                <a href="{{ route('departure/index') }}">
                                     <i class="icon-home"></i>
-                                    Dashboard</a>
-                            </li>
-                            <li>
-                                <a href="index_extended.html">
-                                    <i class="icon-basket"></i>
-                                    Orders</a>
-                            </li>
-                            <li>
-                                <a href="index_extended.html">
-                                    <i class="icon-tag"></i>
-                                    Order View</a>
-                            </li>
-                            <li>
-                                <a href="index_extended.html">
-                                    <i class="icon-handbag"></i>
-                                    Products</a>
-                            </li>
-                            <li>
-                                <a href="index_extended.html">
-                                    <i class="icon-pencil"></i>
-                                    Product Edit</a>
+                                    离职列表</a>
                             </li>
                         </ul>
                     </li>

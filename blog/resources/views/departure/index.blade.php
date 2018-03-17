@@ -30,11 +30,9 @@
             <div class="portlet light">
                 <div class="portlet-title">
                     <div class="caption">
-                        <i class="fa fa-user"></i>招聘计划
+                        <i class="fa fa-user"></i>离职列表
                     </div>
                     <div class="actions">
-                        <a class="btn btn-default btn-sm" data-toggle="modal" href="#static">
-                            <i class="fa fa-pencil"></i> Add </a>
                         <div class="btn-group">
                             <a class="btn btn-default btn-sm" href="#" data-toggle="dropdown">
                                 <i class="fa fa-cogs"></i> Tools <i class="fa fa-angle-down"></i>
@@ -96,34 +94,25 @@
                                 #
                             </th>
                             <th>
-                                中心
+                                事业群
                             </th>
                             <th>
-                                副中心
+                                事业部
                             </th>
                             <th>
-                                部门
+                                岗位
                             </th>
                             <th>
-                                所需人数
+                                员工姓名
                             </th>
                             <th>
-                                完成人数
+                                申请时间
                             </th>
                             <th>
-                                剩余人数
+                                最后工作日
                             </th>
                             <th>
-                                职位
-                            </th>
-                            <th>
-                                薪资范围前
-                            </th>
-                            <th>
-                                薪资范围后
-                            </th>
-                            <th>
-                                创建时间
+                                离职原因
                             </th>
                             <th>
                                 设置
@@ -131,7 +120,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($demandList as $value)
+                        @foreach($departureList as $value)
                             <tr class="odd gradeX">
                                 <td>
                                     {{ $value->id }}
@@ -140,31 +129,22 @@
                                     {{ $value->center_name }}
                                 </td>
                                 <td>
-                                    {{ $value->affiliated_center_name }}
-                                </td>
-                                <td>
                                     {{ $value->division_name }}
                                 </td>
                                 <td>
-                                    {{ $value->num }}
+                                    {{ $value->job_name }}
                                 </td>
                                 <td>
-                                    {{ $value->finish_num }}
+                                    {{ $value->employees_name }}
                                 </td>
                                 <td>
-                                    {{ $value->remaining_num }}
+                                    {{ $value->apply_time }}
                                 </td>
                                 <td>
-                                    {{ $value->position }}
+                                    {{ $value->last_day }}
                                 </td>
                                 <td>
-                                    {{ $value->money_before }}
-                                </td>
-                                <td>
-                                    {{ $value->money_after }}
-                                </td>
-                                <td>
-                                    {{ $value->create_time }}
+                                    {{ $value->reason }}
                                 </td>
                                 <td>
                                     <a href="javascript:;" class="btn default btn-xs green-meadow">
@@ -179,55 +159,12 @@
                     <div class="row">
                         <div class="col-md-8"></div>
                         <div class="col-md-3" style="float:right">
-                            {!! $demandList->appends(array('position'=>$position))->render() !!}
+                            {!! $departureList->render() !!}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        {{--添加modal--}}
-        <div id="static" class="modal fade" tabindex="-1" data-backdrop="static" data-keyboard="false">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                        <h4 class="modal-title">添加招聘计划</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p>
-                            <!-- BEGIN FORM-->
-                        <form action="#" class="form-horizontal">
-                            <div class="form-body">
-                                <div class="form-group">
-                                    <label class="col-md-3 control-label">名称</label>
-                                    <div class="col-md-6">
-                                        <input type="text" class="form-control input-circle add_name" placeholder="请填写角色名称">
-                                        {{--<span class="help-block">--}}
-                                        {{--A block of help text. </span>--}}
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-3 control-label">描述</label>
-                                    <div class="col-md-6">
-                                        <input type="text" class="form-control input-circle add_desc" placeholder="请填写角色描述">
-                                        {{--<span class="help-block">--}}
-                                        {{--A block of help text. </span>--}}
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                        <!-- END FORM-->
-                        </p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" data-dismiss="modal" class="btn default">Cancel</button>
-                        <button type="button" data-dismiss="modal" class="btn green" onclick="add()">添加</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {{------------------------------------------------------------------------------------------------------------ }}               --}}
-        {{--</div>--}}
     </div>
     </div>
     <script src="{{ asset('js/role/index.js') }}" type="text/javascript"></script>
