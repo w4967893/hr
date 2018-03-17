@@ -50,12 +50,12 @@
                         <div class="col-md-12">
                             <h4>离职原因</h4>
                             <div class="form-group">
-                                <textarea class="form-control" rows="10" cols="90"></textarea>
+                                <textarea class="form-control" rows="15" cols="90"></textarea>
                             </div>
                         </div>
                     </form>
                 </div>
-                <div class="col-md-12" style="height: 230px;">
+                <div class="col-md-12" style="height: 50px;">
 
                 </div>
             </div>
