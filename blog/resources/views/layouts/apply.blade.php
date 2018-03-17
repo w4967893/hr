@@ -13,21 +13,21 @@
     <meta content="" name="author"/>
 
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
-    <link href="{{ asset('global/fonts/Open_Sans_400_300_600_700_subset_all.css') }}" rel="stylesheet" type="text/css"/>
-    <link href="{{ asset('global/plugins/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css"/>
-    <link href="{{ asset('global/plugins/simple-line-icons/simple-line-icons.min.css') }}" rel="stylesheet" type="text/css"/>
+    {{--<link href="{{ asset('global/fonts/Open_Sans_400_300_600_700_subset_all.css') }}" rel="stylesheet" type="text/css"/>--}}
+    {{--<link href="{{ asset('global/plugins/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css"/>--}}
+    {{--<link href="{{ asset('global/plugins/simple-line-icons/simple-line-icons.min.css') }}" rel="stylesheet" type="text/css"/>--}}
     <link href="{{ asset('global/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css"/>
-    <link href="{{ asset('global/plugins/uniform/css/uniform.default.css') }}" rel="stylesheet" type="text/css"/>
+    {{--<link href="{{ asset('global/plugins/uniform/css/uniform.default.css') }}" rel="stylesheet" type="text/css"/>--}}
     <link href="{{ asset('global/plugins/bootstrap-switch/css/bootstrap-switch.min.css') }}" rel="stylesheet" type="text/css"/>
     <!-- END GLOBAL MANDATORY STYLES -->
     <!-- BEGIN PAGE LEVEL PLUGIN STYLES -->
-    <link href="{{ asset('global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css') }}" rel="stylesheet" type="text/css"/>
-    <link href="{{ asset('global/plugins/fullcalendar/fullcalendar.min.css') }}" rel="stylesheet" type="text/css"/>
-    <link href="{{ asset('global/plugins/jqvmap/jqvmap/jqvmap.css') }}" rel="stylesheet" type="text/css"/>
+    {{--<link href="{{ asset('global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css') }}" rel="stylesheet" type="text/css"/>--}}
+    {{--<link href="{{ asset('global/plugins/fullcalendar/fullcalendar.min.css') }}" rel="stylesheet" type="text/css"/>--}}
+    {{--<link href="{{ asset('global/plugins/jqvmap/jqvmap/jqvmap.css') }}" rel="stylesheet" type="text/css"/>--}}
     <!-- END PAGE LEVEL PLUGIN STYLES -->
     <!-- BEGIN PAGE STYLES -->
-    <link href="{{ asset('admin/pages/css/tasks.css') }}" rel="stylesheet" type="text/css"/>
-    <link href="{{ asset('global/plugins/icheck/skins/all.css') }}" rel="stylesheet" type="text/css"/>
+    {{--<link href="{{ asset('admin/pages/css/tasks.css') }}" rel="stylesheet" type="text/css"/>--}}
+    {{--<link href="{{ asset('global/plugins/icheck/skins/all.css') }}" rel="stylesheet" type="text/css"/>--}}
     <!-- END PAGE STYLES -->
     <!-- BEGIN THEME STYLES -->
     <!-- DOC: To use 'rounded corners' style just load 'components-rounded.css' stylesheet instead of 'components.css' in the below style tag -->
@@ -80,28 +80,28 @@
 <script src="{{ asset('global/plugins/icheck/icheck.min.js') }}"></script>
 <!-- END CORE PLUGINS -->
 <!-- BEGIN PAGE LEVEL PLUGINS -->
-<script src="{{ asset('global/plugins/jqvmap/jqvmap/jquery.vmap.js') }}" type="text/javascript"></script>
-<script src="{{ asset('global/plugins/jqvmap/jqvmap/maps/jquery.vmap.russia.js') }}" type="text/javascript"></script>
-<script src="{{ asset('global/plugins/jqvmap/jqvmap/maps/jquery.vmap.world.js') }}" type="text/javascript"></script>
-<script src="{{ asset('global/plugins/jqvmap/jqvmap/maps/jquery.vmap.europe.js') }}" type="text/javascript"></script>
-<script src="{{ asset('global/plugins/jqvmap/jqvmap/maps/jquery.vmap.germany.js') }}" type="text/javascript"></script>
-<script src="{{ asset('global/plugins/jqvmap/jqvmap/maps/jquery.vmap.usa.js') }}" type="text/javascript"></script>
-<script src="{{ asset('global/plugins/jqvmap/jqvmap/data/jquery.vmap.sampledata.js') }}" type="text/javascript"></script>
+{{--<script src="{{ asset('global/plugins/jqvmap/jqvmap/jquery.vmap.js') }}" type="text/javascript"></script>--}}
+{{--<script src="{{ asset('global/plugins/jqvmap/jqvmap/maps/jquery.vmap.russia.js') }}" type="text/javascript"></script>--}}
+{{--<script src="{{ asset('global/plugins/jqvmap/jqvmap/maps/jquery.vmap.world.js') }}" type="text/javascript"></script>--}}
+{{--<script src="{{ asset('global/plugins/jqvmap/jqvmap/maps/jquery.vmap.europe.js') }}" type="text/javascript"></script>--}}
+{{--<script src="{{ asset('global/plugins/jqvmap/jqvmap/maps/jquery.vmap.germany.js') }}" type="text/javascript"></script>--}}
+{{--<script src="{{ asset('global/plugins/jqvmap/jqvmap/maps/jquery.vmap.usa.js') }}" type="text/javascript"></script>--}}
+{{--<script src="{{ asset('global/plugins/jqvmap/jqvmap/data/jquery.vmap.sampledata.js') }}" type="text/javascript"></script>--}}
 <!-- IMPORTANT! fullcalendar depends on jquery-ui-1.10.3.custom.min.js for drag & drop support -->
-<script src="{{ asset('global/plugins/morris/morris.min.js') }}" type="text/javascript"></script>
-<script src="{{ asset('global/plugins/morris/raphael-min.js') }}" type="text/javascript"></script>
-<script src="{{ asset('global/plugins/jquery.sparkline.min.js') }}" type="text/javascript"></script>
+{{--<script src="{{ asset('global/plugins/morris/morris.min.js') }}" type="text/javascript"></script>--}}
+{{--<script src="{{ asset('global/plugins/morris/raphael-min.js') }}" type="text/javascript"></script>--}}
+{{--<script src="{{ asset('global/plugins/jquery.sparkline.min.js') }}" type="text/javascript"></script>--}}
 
 
 <!-- END PAGE LEVEL PLUGINS -->
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
-<script src="{{ asset('global/scripts/metronic.js') }}" type="text/javascript"></script>
-<script src="{{ asset('admin/layout4/scripts/layout.js') }}" type="text/javascript"></script>
-<script src="{{ asset('admin/layout4/scripts/demo.js') }}" type="text/javascript"></script>
-<script src="{{ asset('admin/pages/scripts/index.js') }}" type="text/javascript"></script>
-<script src="{{ asset('admin/pages/scripts/tasks.js') }}" type="text/javascript"></script>
-<script src="{{ asset('admin/pages/scripts/form-icheck.js') }}"></script>
-<script src="{{ asset('admin/pages/scripts/search.js') }}"></script>
+{{--<script src="{{ asset('global/scripts/metronic.js') }}" type="text/javascript"></script>--}}
+{{--<script src="{{ asset('admin/layout4/scripts/layout.js') }}" type="text/javascript"></script>--}}
+{{--<script src="{{ asset('admin/layout4/scripts/demo.js') }}" type="text/javascript"></script>--}}
+{{--<script src="{{ asset('admin/pages/scripts/index.js') }}" type="text/javascript"></script>--}}
+{{--<script src="{{ asset('admin/pages/scripts/tasks.js') }}" type="text/javascript"></script>--}}
+{{--<script src="{{ asset('admin/pages/scripts/form-icheck.js') }}"></script>--}}
+{{--<script src="{{ asset('admin/pages/scripts/search.js') }}"></script>--}}
 <!-- END PAGE LEVEL SCRIPTS -->
 <script>
     jQuery(document).ready(function() {
