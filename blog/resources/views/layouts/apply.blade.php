@@ -43,65 +43,11 @@
 
     <!-- END THEME STYLES -->
     <link rel="shortcut icon" href="favicon.ico"/>
-
-
-
-{{--<title>{{ config('app.name', 'Laravel') }}</title>--}}
-
-<!-- Styles -->
-{{--<link href="{{ asset('css/app.css') }}" rel="stylesheet">--}}
-
-<!-- Scripts -->
-    {{--<script>--}}
-    {{--window.Laravel = {!! json_encode([--}}
-    {{--'csrfToken' => csrf_token(),--}}
-    {{--]) !!};--}}
-    {{--</script>--}}
 </head>
-
-<body class="page-header-fixed page-sidebar-closed-hide-logo ppage-sidebar-closed-hide-logo">
-<!-- BEGIN HEADER -->
-<div class="page-header navbar navbar-fixed-top">
-    <!-- BEGIN HEADER INNER -->
-    <div class="page-header-inner">
-        <!-- BEGIN LOGO -->
-        <div class="page-logo">
-            <a href="index.html">
-                {{--<img src="{{ asset('admin/layout4/img/logo-light.png')}}" alt="logo" class="logo-default"/>--}}
-            </a>
-        </div>
-        <!-- END LOGO -->
-        <!-- BEGIN RESPONSIVE MENU TOGGLER -->
-        <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
-        </a>
-        <!-- END RESPONSIVE MENU TOGGLER -->
-        <!-- BEGIN PAGE ACTIONS -->
-        <!-- DOC: Remove "hide" class to enable the page header actions -->
-        <div class="page-actions">
-            <div class="btn-group">
-            </div>
-        </div>
-        <!-- END PAGE ACTIONS -->
-        <!-- BEGIN PAGE TOP -->
-        <div class="page-top">
-
-        </div>
-        <!-- END PAGE TOP -->
-    </div>
-    <!-- END HEADER INNER -->
-</div>
-<!-- END HEADER -->
-<div class="clearfix"></div>
-!-- BEGIN CONTAINER -->
 <div class="page-container">
-    <!-- BEGIN SIDEBAR -->
-    @section('sidebar')
-    @show
-<!-- BEGIN CONTENT -->
     <div class="page-content-wrapper">
         @yield('content')
     </div>
-    <!-- END CONTENT -->
 </div>
 <!-- BEGIN FOOTER -->
 <div class="page-footer">
