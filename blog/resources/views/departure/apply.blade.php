@@ -55,14 +55,20 @@
                         <div class="col-md-12">
                             <h4>离职原因</h4>
                             <div class="form-group">
-                                <textarea class="form-control" rows="15" cols="90"></textarea>
+                                <textarea class="form-control" rows="15" cols="88"></textarea>
+                            </div>
+                            <p></p>
+                        </div>
+                        <div class="col-md-12">
+                            <h4></h4>
+                            <div class="col-md-9"></div>
+                            <div class="col-md-3">
+                                <button type="button" data-dismiss="modal" class="btn red">提交申请</button>
                             </div>
                         </div>
                     </form>
                 </div>
-                <div class="col-md-12" style="height: 50px;">
-
-                </div>
+                <div class="col-md-12" style="height: 50px;"></div>
             </div>
         {{--</div>--}}
     </div>
