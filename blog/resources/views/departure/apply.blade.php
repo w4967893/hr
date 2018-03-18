@@ -33,6 +33,7 @@
                             <div class="form-group">
                                 <label for="exampleInputPassword1">事业部</label>
                                 <select class="form-control division">
+                                    <option>请选择</option>
                                     {{--@foreach($jobList as $jvalue)--}}
                                         {{--<option value="{{ $jvalue->id }}">{{ $jvalue->name }}</option>--}}
                                     {{--@endforeach--}}

@@ -28,7 +28,7 @@ $(".center").change(function(){
     $('.division').empty();
     var centerId = $(this).val();
     if (centerId == 0) {
-        $('.division').append('<option>请选择事业部</option>>');
+        $('.division').append('<option>请选择</option>>');
         return;
     }
     $.ajax({
