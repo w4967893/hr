@@ -61,30 +61,30 @@
                     </div>
                 </div>
                 <form class="form-inline" role="form" action="/demand/index" method="get">
-                    <div class="form-group">
-                        <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                        <input type="text" class="form-control" id="" name="center_name" placeholder="中心">
-                    </div>
-                    <div class="form-group">
-                        <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                        <input type="text" class="form-control" id="" name="affiliated_center_name" placeholder="副中心">
-                    </div>
-                    <div class="form-group">
-                        <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                        <input type="text" class="form-control" id="" name="division_name" placeholder="部门">
-                    </div>
-                    <div class="form-group">
-                        <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                        <input type="text" class="form-control" id="" name="position" placeholder="职位">
-                    </div>
+                    {{--<div class="form-group">--}}
+                        {{--<label class="sr-only" for="exampleInputEmail2">Email address</label>--}}
+                        {{--<input type="text" class="form-control" id="" name="center_name" placeholder="中心">--}}
+                    {{--</div>--}}
+                    {{--<div class="form-group">--}}
+                        {{--<label class="sr-only" for="exampleInputEmail2">Email address</label>--}}
+                        {{--<input type="text" class="form-control" id="" name="affiliated_center_name" placeholder="副中心">--}}
+                    {{--</div>--}}
+                    {{--<div class="form-group">--}}
+                        {{--<label class="sr-only" for="exampleInputEmail2">Email address</label>--}}
+                        {{--<input type="text" class="form-control" id="" name="division_name" placeholder="部门">--}}
+                    {{--</div>--}}
+                    {{--<div class="form-group">--}}
+                        {{--<label class="sr-only" for="exampleInputEmail2">Email address</label>--}}
+                        {{--<input type="text" class="form-control" id="" name="position" placeholder="职位">--}}
+                    {{--</div>--}}
                     {{--<div class="form-group">--}}
                     {{--<label class="sr-only" for="exampleInputPassword2">Password</label>--}}
                     {{--<input class="form-control" id="" placeholder="">--}}
                     {{--</div>--}}
-                    <div class="form-group" style="float:right">
+                    {{--<div class="form-group" style="float:right">--}}
                         {{--<button class="btn blue">搜索</button>--}}
-                        <input type="submit" class="btn blue" value="搜索">
-                    </div>
+                        {{--<input type="submit" class="btn blue" value="搜索">--}}
+                    {{--</div>--}}
                 </form>
                 <div class="portlet-body">
                     <table class="table table-striped table-bordered table-hover" id="sample_2">
@@ -109,10 +109,16 @@
                                 申请时间
                             </th>
                             <th>
+                                本月是否请假
+                            </th>
+                            <th>
                                 最后工作日
                             </th>
                             <th>
                                 离职原因
+                            </th>
+                            <th>
+                                对公司建议
                             </th>
                             <th>
                                 设置
@@ -141,10 +147,16 @@
                                     {{ $value->apply_time }}
                                 </td>
                                 <td>
+                                    {{ $value->holiday }}
+                                </td>
+                                <td>
                                     {{ $value->last_day }}
                                 </td>
                                 <td>
                                     {{ $value->reason }}
+                                </td>
+                                <td>
+                                    {{ $value->comment }}
                                 </td>
                                 <td>
                                     <a href="javascript:;" class="btn default btn-xs green-meadow">

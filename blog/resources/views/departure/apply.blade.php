@@ -87,7 +87,7 @@
                             <p></p>
                         </div>
                         <div class="col-md-12">
-                            <h4>公司建议</h4>
+                            <h4>对公司建议</h4>
                             <div class="form-group">
                                 <textarea class="form-control" rows="10" cols="88"></textarea>
                             </div>
