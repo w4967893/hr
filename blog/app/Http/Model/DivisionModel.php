@@ -16,4 +16,9 @@ class DivisionModel
     {
         return DB::table('division')->where($where)->delete();
     }
+
+    public function dlist($where)
+    {
+        return DB::table('division')->where($where)->get()->toArray();
+    }
 }

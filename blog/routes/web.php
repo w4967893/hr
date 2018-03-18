@@ -18,6 +18,7 @@
 Auth::routes();
 
 Route::get('/departure/apply', 'DepartureController@apply')->name('departure/apply');//离职列表
+Route::get('/division/dList', 'DivisionController@dList')->name('division/dList');//部门列表
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/', 'HomeController@index')->name('home');

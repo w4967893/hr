@@ -6,18 +6,24 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Model\DepartureModel;
+use App\Http\Model\CenterModel;
+use App\Http\Model\JobModel;
 
 class DepartureController extends BaseController
 {
     protected $departureModel;
+    protected $centerModel;
+    protected $jobModel;
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct(DepartureModel $departureModel)
+    public function __construct(DepartureModel $departureModel, CenterModel $centerModel, JobModel $jobModel)
     {
         $this->departureModel = $departureModel;
+        $this->centerModel = $centerModel;
+        $this->jobModel = $jobModel;
     }
 
     /**
@@ -27,7 +33,6 @@ class DepartureController extends BaseController
      */
     public function index(Request $request)
     {
-
         $where = [];
         $departureArr = $this->departureModel->dlist($where);
         return view('departure/index')->with(['departureList' => $departureArr]);
@@ -36,6 +41,8 @@ class DepartureController extends BaseController
     //离职申请
     public function apply()
     {
-        return view('departure/apply');
+        $centerArr = $this->centerModel->clist();
+        $jobArr = $this->jobModel->jList();
+        return view('departure/apply')->with(['centerList' => $centerArr, 'jobList' => $jobArr]);
     }
 }

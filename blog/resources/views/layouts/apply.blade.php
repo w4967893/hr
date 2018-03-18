@@ -12,6 +12,7 @@
     <meta content="" name="description"/>
     <meta content="" name="author"/>
 
+    <link href="{{ asset('css/daterangepicker.css') }}" rel="stylesheet" type="text/css"/>
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     {{--<link href="{{ asset('global/fonts/Open_Sans_400_300_600_700_subset_all.css') }}" rel="stylesheet" type="text/css"/>--}}
     {{--<link href="{{ asset('global/plugins/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css"/>--}}
@@ -78,6 +79,8 @@
 <script src="{{ asset('global/plugins/uniform/jquery.uniform.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('global/plugins/bootstrap-switch/js/bootstrap-switch.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('global/plugins/icheck/icheck.min.js') }}"></script>
+<script src="{{ asset('global/plugins/moment.js') }}" type="text/javascript"></script>
+<script src="{{ asset('global/plugins/daterangepicker.js') }}"></script>
 <!-- END CORE PLUGINS -->
 <!-- BEGIN PAGE LEVEL PLUGINS -->
 {{--<script src="{{ asset('global/plugins/jqvmap/jqvmap/jquery.vmap.js') }}" type="text/javascript"></script>--}}
