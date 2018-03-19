@@ -17,4 +17,9 @@ class DepartureModel
             ->where($where)->paginate(env('PAGE_LIMIT'));
         return $data;
     }
+
+    public function add($insert)
+    {
+        return DB::table('departure')->insert($insert);
+    }
 }

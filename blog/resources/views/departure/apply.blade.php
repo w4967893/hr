@@ -18,12 +18,12 @@
                 </div>
                 <div class="col-md-12" style="height: 30px;"></div>
                 <div class="col-md-12">
-                    <form class="form-inline" role="form" action="/demand/index" method="get">
+                    <form class="form-inline">
                         <div class="col-md-12">
                             <h4>岗位信息</h4>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">事业群</label>
-                                <select class="form-control center">
+                                <select class="form-control center_id">
                                     <option value="0">请选择</option>
                                     @foreach($centerList as $cvalue)
                                         <option value="{{ $cvalue->id }}">{{ $cvalue->name }}</option>
@@ -32,8 +32,8 @@
                             </div>&nbsp;&nbsp;&nbsp;
                             <div class="form-group">
                                 <label for="exampleInputPassword1">事业部</label>
-                                <select class="form-control division">
-                                    <option>请选择</option>
+                                <select class="form-control division_id">
+                                    <option value="0">请选择</option>
                                     {{--@foreach($jobList as $jvalue)--}}
                                         {{--<option value="{{ $jvalue->id }}">{{ $jvalue->name }}</option>--}}
                                     {{--@endforeach--}}
@@ -41,8 +41,8 @@
                             </div>&nbsp;&nbsp;&nbsp;
                             <div class="form-group">
                                 <label for="exampleInputPassword1">岗位</label>
-                                <select class="form-control add_center_id">
-                                    <option>请选择</option>
+                                <select class="form-control job_id">
+                                    <option value="0">请选择</option>
                                     @foreach($jobList as $jvalue)
                                         <option value="{{ $jvalue->id }}">{{ $jvalue->name }}</option>
                                     @endforeach
@@ -54,11 +54,11 @@
                             <h4>员工信息</h4>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">离职人员姓名</label>
-                                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                <input type="text" class="form-control employees_name" id="exampleInputPassword1" placeholder="离职人员姓名">
                             </div>&nbsp;
                             <div class="form-group">
                                 <label for="exampleInputPassword1">本月是否请假</label>
-                                <select class="form-control add_center_id">
+                                <select class="form-control holiday">
                                     <option value="0">请选择</option>
                                     <option value="1">是</option>
                                     <option value="2">否</option>
@@ -66,7 +66,7 @@
                             </div>&nbsp;
                             <div class="form-group">
                                 <label for="exampleInputPassword1">最后工作日期</label>
-                                <input type="text" class="form-control" id="startDate" value="07/01/2015">
+                                <input type="text" class="form-control last_day" id="startDate" value="07/01/2015">
                             </div>
                             <p></p>
                         </div>
@@ -74,15 +74,15 @@
                             <h4>离职原因</h4>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">离职原因</label>
-                                <select class="form-control add_center_id">
-                                    <option>请选择</option>
-                                    <option value="">薪资问题</option>
-                                    <option value="">加班问题</option>
-                                    <option value="">未完成业绩考核</option>
-                                    <option value="">缺少培训</option>
-                                    <option value="">家庭原因</option>
-                                    <option value="">距离问题</option>
-                                    <option value="">个人原因</option>
+                                <select class="form-control reason">
+                                    <option value="0">请选择</option>
+                                    <option value="1">薪资问题</option>
+                                    <option value="2">加班问题</option>
+                                    <option value="3">未完成业绩考核</option>
+                                    <option value="4">缺少培训</option>
+                                    <option value="5">家庭原因</option>
+                                    <option value="6">距离问题</option>
+                                    <option value="7">个人原因</option>
                                 </select>
                             </div>
                             <p></p>
@@ -90,7 +90,7 @@
                         <div class="col-md-12">
                             <h4>对公司建议</h4>
                             <div class="form-group">
-                                <textarea class="form-control" rows="10" cols="88"></textarea>
+                                <textarea class="form-control comment" rows="10" cols="88"></textarea>
                             </div>
                             <p></p>
                         </div>
@@ -98,7 +98,7 @@
                             <h4></h4>
                             <div class="col-md-9"></div>
                             <div class="col-md-3">
-                                <button type="button" data-dismiss="modal" class="btn red">提交申请</button>
+                                <button type="button" data-dismiss="modal" class="btn red" onclick="submit_apply()">提交申请</button>
                             </div>
                         </div>
                     </form>
