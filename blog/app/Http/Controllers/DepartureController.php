@@ -35,6 +35,18 @@ class DepartureController extends BaseController
     {
         $where = [];
         $departureArr = $this->departureModel->dlist($where);
+        foreach ($departureArr as $key => $value) {
+
+            if ($value->holiday == 1) {
+                $departureArr[$key]->holiday = '是';
+            } else {
+                $departureArr[$key]->holiday = '否';
+            }
+
+            $reasonArr = [1 => '薪资问题', 2 => '加班问题', 3 => '未完成业绩考核', 4 => '缺少培训', 5 => '家庭原因', 6 => '距离问题', 7 => '个人原因'];
+            $departureArr[$key]->reason = $reasonArr[$value->reason];
+
+        }
         return view('departure/index')->with(['departureList' => $departureArr]);
     }
 

@@ -120,9 +120,9 @@
                             <th>
                                 对公司建议
                             </th>
-                            <th>
-                                设置
-                            </th>
+                            {{--<th>--}}
+                                {{--设置--}}
+                            {{--</th>--}}
                         </tr>
                         </thead>
                         <tbody>
@@ -158,12 +158,12 @@
                                 <td>
                                     {{ $value->comment }}
                                 </td>
-                                <td>
-                                    <a href="javascript:;" class="btn default btn-xs green-meadow">
-                                        <i class="fa fa-edit"></i> 修改 </a>&nbsp;
-                                    <a href="javascript:;" class="btn default btn-xs red-sunglo">
-                                        <i class="fa fa-trash-o"></i> Delete </a>
-                                </td>
+                                {{--<td>--}}
+                                    {{--<a href="javascript:;" class="btn default btn-xs green-meadow">--}}
+                                        {{--<i class="fa fa-edit"></i> 修改 </a>&nbsp;--}}
+                                    {{--<a href="javascript:;" class="btn default btn-xs red-sunglo">--}}
+                                        {{--<i class="fa fa-trash-o"></i> Delete </a>--}}
+                                {{--</td>--}}
                             </tr>
                         @endforeach
                         </tbody>
