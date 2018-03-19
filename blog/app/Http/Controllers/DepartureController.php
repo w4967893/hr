@@ -46,6 +46,9 @@ class DepartureController extends BaseController
             $reasonArr = [1 => '薪资问题', 2 => '加班问题', 3 => '未完成业绩考核', 4 => '缺少培训', 5 => '家庭原因', 6 => '距离问题', 7 => '个人原因'];
             $departureArr[$key]->reason = $reasonArr[$value->reason];
 
+            if (!$value->comment) {
+                $departureArr[$key]->comment = '-';
+            }
         }
         return view('departure/index')->with(['departureList' => $departureArr]);
     }
