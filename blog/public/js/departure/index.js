@@ -28,7 +28,7 @@ $(".center_id").change(function(){
     $('.division_id').empty();
     var centerId = $(this).val();
     if (centerId == 0) {
-        $('.division').append('<option value="0">请选择</option>>');
+        $('.division_id').append('<option value="0">请选择</option>>');
         return;
     }
     $.ajax({
@@ -55,15 +55,15 @@ $(".center_id").change(function(){
 function submit_apply()
 {
     var center_id = $(".center_id").val();
-    if (!center_id) {
+    if (center_id == 0) {
         alert('请选择事业群');return;
     }
     var division_id = $(".division_id").val();
-    if (!division_id) {
+    if (division_id == 0) {
         alert('请选择事业部');return;
     }
     var job_id = $(".job_id").val();
-    if (!job_id) {
+    if (job_id == 0) {
         alert('请选择岗位');return;
     }
     var employees_name = $(".employees_name").val();
@@ -71,7 +71,7 @@ function submit_apply()
         alert('请填写离职人员姓名');return;
     }
     var holiday = $(".holiday").val();
-    if (!holiday) {
+    if (holiday == 0) {
         alert('请填写本月是否请假');return;
     }
     var last_day = $(".last_day").val();
@@ -79,11 +79,10 @@ function submit_apply()
         alert('请填写最后工作日期');return;
     }
     var reason = $(".reason").val();
-    if (!reason) {
+    if (reason == 0) {
         alert('请填写离职原因');return;
     }
     var comment = $(".comment").val();
-
     $.ajax({
         type: "POST",
         url: "/departure/add",
